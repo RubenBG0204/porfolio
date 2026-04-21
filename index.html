@@ -1,0 +1,175 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+  <!-- Metadatos básicos -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rubén.dev | Portfolio</title>
+  <meta name="description" content="Portfolio personal de Rubén, estudiante de DAM y futuro desarrollador." />
+  <!-- Meta etiquetas SEO -->
+  <meta name="author" content="Rubén" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://ruben.dev/" />
+  <meta property="og:title" content="Rubén.dev | Portfolio" />
+  <meta property="og:description" content="Portfolio personal de Rubén, estudiante de DAM" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ruben.dev/" />
+  <!-- Favicon (emoji) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%3C/text%3E%3C/svg%3E" />
+  <!-- Tipografía -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <!-- EmailJS (configurar con tu cuenta) -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    // Public Key de EmailJS configurada por Rubén
+    emailjs.init('WIkXtAlA63mFXV0UX');
+  </script>
+  <!-- Estilos -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Accesibilidad: salto rápido al contenido principal -->
+  <a class="skip-link" href="#contenido-principal">Saltar al contenido</a>
+
+  <!-- Header / Navbar -->
+  <header class="header" id="inicio">
+    <nav class="nav">
+      <a class="logo" href="#inicio">Rubén.dev</a>
+      <button class="nav__toggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="contenido-principal">
+    <!-- Hero / Portada -->
+    <section class="hero">
+      <div class="container hero__content">
+        <p class="eyebrow">Portfolio de desarrollador</p>
+        <h1>Hola, soy Rubén</h1>
+        <h2>Estudiante de Desarrollo de Aplicaciones Multiplataforma</h2>
+        <p class="hero__text">Construyendo mis primeros proyectos y aprendiendo cada día</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#proyectos">Ver mis proyectos</a>
+          <a class="btn btn--ghost" href="#contacto">Contactar</a>
+        </div>
+      </div>
+      <div class="hero__glow"></div>
+    </section>
+
+    <!-- Sobre mí -->
+    <section class="about" id="sobre-mi">
+      <div class="container grid">
+        <div class="about__image reveal">
+          <div class="placeholder" role="img" aria-label="Fotografía de Rubén">📸</div>
+        </div>
+        <div class="about__content reveal">
+          <h3>Sobre mí</h3>
+          <p>
+            Soy Rubén, estudiante de primer año de DAM. Me apasiona la tecnología y el desarrollo de software.
+            Actualmente estoy aprendiendo programación y construyendo mis primeros proyectos.
+          </p>
+          <ul class="skills">
+            <li>Java (básico)</li>
+            <li>HTML & CSS</li>
+            <li>JavaScript básico</li>
+            <li>Bases de datos</li>
+            <li>Git (básico)</li>
+          </ul>
+          <!-- TODO: Crear el archivo cv-ruben.pdf en la raíz del proyecto -->
+          <a href="cv-ruben.pdf" class="btn btn--small" download>📄 Descargar CV</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Proyectos -->
+    <section class="projects" id="proyectos">
+      <div class="container">
+        <div class="section__header reveal">
+          <h3>Proyectos</h3>
+          <p>Ahora mismo estoy en fase de aprendizaje activo. Pronto publicaré aquí proyectos reales.</p>
+        </div>
+        <div class="projects__grid">
+          <!-- Primer proyecto publicado -->
+          <article class="card reveal">
+            <div class="card__media" role="img" aria-label="Vista previa del proyecto marca_ropa">marca_ropa</div>
+            <div class="card__body">
+              <h4>marca_ropa</h4>
+              <p>Tienda online de ropa en desarrollo, enfocada en diseño limpio, catálogo de productos y experiencia responsive.</p>
+              <a class="btn btn--small" href="proyecto-1.html">Ver proyecto</a>
+            </div>
+          </article>
+          <!-- Tarjetas vacías hasta tener proyectos reales -->
+          <article class="card reveal">
+            <div class="card__media" role="img" aria-label="Espacio reservado para proyecto futuro">Próximamente</div>
+          </article>
+          <article class="card reveal">
+            <div class="card__media" role="img" aria-label="Espacio reservado para proyecto futuro">Próximamente</div>
+          </article>
+          <article class="card reveal">
+            <div class="card__media" role="img" aria-label="Espacio reservado para proyecto futuro">Próximamente</div>
+          </article>
+        </div>
+        <div class="projects__more reveal">
+          <a class="btn btn--small" href="proyectos.html">Ver más</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section class="contact" id="contacto">
+      <div class="container grid">
+        <div class="contact__info reveal">
+          <h3>Contacto</h3>
+          <p>¿Quieres contactar conmigo o ver mi progreso?</p>
+          <div class="socials">
+            <a href="https://github.com/tuusuario" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GitHub</a>
+            <a href="https://linkedin.com/in/tuusuario" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
+          </div>
+        </div>
+        <form class="contact__form reveal" id="contact-form" autocomplete="off">
+          <label>
+            Nombre
+            <input type="text" name="nombre" placeholder="Tu nombre" required />
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" placeholder="tucorreo@email.com" required />
+          </label>
+          <label>
+            Mensaje
+            <textarea name="mensaje" rows="5" placeholder="Cuéntame en qué puedo ayudarte" required></textarea>
+          </label>
+          <button class="btn btn--primary" type="submit">Enviar</button>
+          <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__content">
+      <p>© <span id="current-year"></span> Rubén - Desarrollo de Aplicaciones</p>
+      <div class="socials">
+        <a href="https://github.com/tuusuario" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://linkedin.com/in/tuusuario" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botón volver arriba -->
+  <button class="scroll-top" aria-label="Volver arriba">↑</button>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>

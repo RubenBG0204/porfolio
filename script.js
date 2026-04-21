@@ -1,0 +1,94 @@
+﻿// Botón de menú móvil
+const navToggle = document.querySelector('.nav__toggle');
+const navLinks = document.querySelector('.nav__links');
+
+if (navToggle && navLinks) {
+  navToggle.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', isOpen);
+  });
+}
+
+// Año dinámico en el footer
+const yearSpan = document.querySelector('#current-year');
+if (yearSpan) {
+  yearSpan.textContent = new Date().getFullYear();
+}
+
+// Animaciones al hacer scroll
+const revealItems = document.querySelectorAll('.reveal');
+
+const observer = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.15 }
+);
+
+revealItems.forEach(item => observer.observe(item));
+
+// Botón volver arriba
+const scrollTopBtn = document.querySelector('.scroll-top');
+
+const toggleScrollTop = () => {
+  if (!scrollTopBtn) return;
+  if (window.scrollY > 500) {
+    scrollTopBtn.classList.add('visible');
+  } else {
+    scrollTopBtn.classList.remove('visible');
+  }
+};
+
+window.addEventListener('scroll', toggleScrollTop);
+
+toggleScrollTop();
+
+if (scrollTopBtn) {
+  scrollTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
+// Envío de formulario con EmailJS (configurar IDs)
+const contactForm = document.querySelector('#contact-form');
+if (contactForm) {
+  const formStatus = document.querySelector('#form-status');
+  const submitButton = contactForm.querySelector('button[type="submit"]');
+
+  contactForm.addEventListener('submit', event => {
+    event.preventDefault();
+    if (formStatus) {
+      formStatus.textContent = 'Enviando mensaje...';
+    }
+    if (submitButton) {
+      submitButton.disabled = true;
+      submitButton.setAttribute('aria-busy', 'true');
+    }
+
+    // EmailJS configurado con los IDs de Rubén
+    emailjs
+      .sendForm('service_a2606ap', 'template_3hzmakf', contactForm)
+      .then(() => {
+        if (formStatus) {
+          formStatus.textContent = 'Mensaje enviado correctamente.';
+        }
+        contactForm.reset();
+      })
+      .catch(() => {
+        if (formStatus) {
+          formStatus.textContent = 'Hubo un error al enviar el mensaje. Intentalo de nuevo.';
+        }
+      })
+      .finally(() => {
+        if (submitButton) {
+          submitButton.disabled = false;
+          submitButton.removeAttribute('aria-busy');
+        }
+      });
+  });
+}

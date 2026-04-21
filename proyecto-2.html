@@ -1,0 +1,89 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+  <!-- Metadatos básicos -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>App de tareas | Rubén.dev</title>
+  <meta name="description" content="Proyecto: App de tareas." />
+  <!-- Favicon (emoji) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%3C/text%3E%3C/svg%3E" />
+  <!-- Tipografía -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <!-- Estilos -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Header / Navbar -->
+  <header class="header" id="inicio">
+    <nav class="nav">
+      <a class="logo" href="index.html#inicio">Rubén.dev</a>
+      <button class="nav__toggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links">
+        <li><a href="index.html#inicio">Inicio</a></li>
+        <li><a href="index.html#sobre-mi">Sobre mí</a></li>
+        <li><a href="index.html#proyectos">Proyectos</a></li>
+        <li><a href="index.html#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero del proyecto -->
+    <section class="hero" style="padding:4.5rem 0 3rem;">
+      <div class="container hero__content">
+        <p class="eyebrow">Proyecto</p>
+        <h1>App de tareas</h1>
+        <p class="hero__text">Gestor simple con CRUD básico, estados de tarea y filtrado por prioridad.</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="index.html#proyectos">Volver a proyectos</a>
+          <a class="btn btn--ghost" href="#detalle">Ver detalle</a>
+        </div>
+      </div>
+      <div class="hero__glow"></div>
+    </section>
+
+    <!-- Detalle del proyecto -->
+    <section class="about" id="detalle">
+      <div class="container grid">
+        <div class="about__image reveal">
+          <div class="placeholder" role="img" aria-label="Vista previa de la app de tareas">✅</div>
+        </div>
+        <div class="about__content reveal">
+          <h3>Descripción</h3>
+          <p>
+            Aplicación enfocada en organización personal con creación, edición y eliminación de tareas.
+            Interfaz limpia, enfocada en productividad y orden.
+          </p>
+          <ul class="skills">
+            <li>JavaScript</li>
+            <li>UI</li>
+            <li>CRUD</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__content">
+      <p>© <span id="current-year"></span> Rubén - Desarrollo de Aplicaciones</p>
+      <div class="socials">
+        <a href="#">GitHub</a>
+        <a href="#">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botón volver arriba -->
+  <button class="scroll-top" aria-label="Volver arriba">↑</button>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
