@@ -279,6 +279,69 @@ section {
   color: var(--accent);
 }
 
+/* Experiencia */
+.experience {
+  background: var(--bg);
+}
+
+.timeline {
+  position: relative;
+  margin-top: 0.5rem;
+  padding-left: 1.8rem;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 0.45rem;
+  top: 0.35rem;
+  bottom: 0.35rem;
+  width: 2px;
+  background: linear-gradient(var(--accent-2), rgba(56, 189, 248, 0.15));
+}
+
+.timeline__item {
+  position: relative;
+  margin-bottom: 1.25rem;
+}
+
+.timeline__item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline__dot {
+  position: absolute;
+  left: calc(-1.8rem + 2px);
+  top: 0.45rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 5px rgba(45, 212, 191, 0.15);
+}
+
+.timeline__content {
+  background: var(--card);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 1rem 1.1rem;
+}
+
+.timeline__content h4 {
+  margin-bottom: 0.35rem;
+}
+
+.timeline__content p {
+  color: var(--muted);
+}
+
+.timeline__date {
+  color: var(--accent-2) !important;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+
 /* Proyectos */
 .projects {
   background: var(--bg);
@@ -297,6 +360,36 @@ section {
   display: grid;
   gap: 2rem;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+}
+
+.projects__filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-bottom: 1.4rem;
+}
+
+.filter-btn {
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  background: rgba(56, 189, 248, 0.1);
+  color: var(--accent-2);
+  border-radius: 999px;
+  padding: 0.45rem 0.95rem;
+  font-family: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
+}
+
+.filter-btn:hover {
+  background: rgba(56, 189, 248, 0.2);
+  transform: translateY(-1px);
+}
+
+.filter-btn.is-active {
+  background: linear-gradient(120deg, var(--accent), var(--accent-2));
+  color: #051018;
+  border-color: transparent;
 }
 
 .projects__more {
@@ -337,6 +430,16 @@ section {
 .card__body p {
   color: var(--muted);
   font-size: 0.95rem;
+}
+
+.project-tag {
+  color: var(--accent-2) !important;
+  font-size: 0.85rem !important;
+  font-weight: 600;
+}
+
+.card.is-hidden {
+  display: none;
 }
 
 /* Contacto */
@@ -493,6 +596,14 @@ section {
 
   .hero {
     padding-top: 5rem;
+  }
+
+  .timeline {
+    padding-left: 1.4rem;
+  }
+
+  .timeline__dot {
+    left: calc(-1.4rem + 2px);
   }
 }
 

@@ -57,23 +57,46 @@
           <p>Aquí tienes mis proyectos publicados y los próximos que iré añadiendo.</p>
         </div>
 
+        <div class="projects__filters reveal" role="group" aria-label="Filtrar proyectos por tecnología">
+          <button class="filter-btn is-active" type="button" data-filter="all">Todos</button>
+          <button class="filter-btn" type="button" data-filter="web">Web</button>
+          <button class="filter-btn" type="button" data-filter="js">JavaScript</button>
+          <button class="filter-btn" type="button" data-filter="java">Java</button>
+        </div>
+
         <div class="projects__grid">
-          <article class="card reveal">
+          <article class="card reveal" data-category="web js">
             <div class="card__media" role="img" aria-label="Vista previa del proyecto marca_ropa">marca_ropa</div>
             <div class="card__body">
               <h4>marca_ropa</h4>
               <p>Tienda online de ropa en desarrollo, con catálogo y experiencia responsive.</p>
+              <p class="project-tag">Web • JavaScript</p>
               <a class="btn btn--small" href="proyecto-1.html">Ver proyecto</a>
             </div>
           </article>
-          <article class="card reveal">
-            <div class="card__media" role="img" aria-label="Espacio para proyecto futuro">Próximamente</div>
+          <article class="card reveal" data-category="java">
+            <div class="card__media" role="img" aria-label="Proyecto Java en preparación">Próximamente</div>
+            <div class="card__body">
+              <h4>Proyecto Java</h4>
+              <p>Espacio reservado para un proyecto orientado a lógica y estructura de datos.</p>
+              <p class="project-tag">Java</p>
+            </div>
           </article>
-          <article class="card reveal">
-            <div class="card__media" role="img" aria-label="Espacio para proyecto futuro">Próximamente</div>
+          <article class="card reveal" data-category="js">
+            <div class="card__media" role="img" aria-label="Proyecto JavaScript en preparación">Próximamente</div>
+            <div class="card__body">
+              <h4>Proyecto JavaScript</h4>
+              <p>Espacio reservado para una app interactiva con eventos y manipulación del DOM.</p>
+              <p class="project-tag">JavaScript</p>
+            </div>
           </article>
-          <article class="card reveal">
-            <div class="card__media" role="img" aria-label="Espacio para proyecto futuro">Próximamente</div>
+          <article class="card reveal" data-category="web">
+            <div class="card__media" role="img" aria-label="Proyecto web en preparación">Próximamente</div>
+            <div class="card__body">
+              <h4>Proyecto Web</h4>
+              <p>Espacio reservado para una nueva web responsive con diseño moderno y accesible.</p>
+              <p class="project-tag">Web</p>
+            </div>
           </article>
         </div>
       </div>

@@ -1,0 +1,71 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+  <!-- Metadatos básicos -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Página no encontrada | Rubén.dev</title>
+  <meta name="description" content="La página solicitada no existe en Rubén.dev." />
+  <!-- Favicon (emoji) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB%3C/text%3E%3C/svg%3E" />
+  <!-- Tipografía -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <!-- Estilos -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Accesibilidad: salto rápido al contenido principal -->
+  <a class="skip-link" href="#contenido-principal">Saltar al contenido</a>
+
+  <!-- Header / Navbar -->
+  <header class="header" id="inicio">
+    <nav class="nav">
+      <a class="logo" href="index.html#inicio">Rubén.dev</a>
+      <button class="nav__toggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links">
+        <li><a href="index.html#inicio">Inicio</a></li>
+        <li><a href="index.html#sobre-mi">Sobre mí</a></li>
+        <li><a href="index.html#proyectos">Proyectos</a></li>
+        <li><a href="index.html#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="contenido-principal">
+    <!-- Estado 404 -->
+    <section class="hero" style="padding: 5rem 0 4rem;">
+      <div class="container hero__content reveal">
+        <p class="eyebrow">Error 404</p>
+        <h1>Página no encontrada</h1>
+        <p class="hero__text">La URL que intentas abrir no existe o ha cambiado. Puedes volver al inicio o revisar todos mis proyectos.</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="index.html">Volver al inicio</a>
+          <a class="btn btn--ghost" href="proyectos.html">Ver proyectos</a>
+        </div>
+      </div>
+      <div class="hero__glow"></div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__content">
+      <p>© <span id="current-year"></span> Rubén - Desarrollo de Aplicaciones</p>
+      <div class="socials">
+        <a href="https://github.com/tuusuario" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://linkedin.com/in/tuusuario" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botón volver arriba -->
+  <button class="scroll-top" aria-label="Volver arriba">↑</button>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>

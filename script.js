@@ -92,3 +92,24 @@ if (contactForm) {
       });
   });
 }
+
+// Filtro de proyectos por categoria (solo en proyectos.html)
+const filterButtons = document.querySelectorAll('.filter-btn');
+const projectCards = document.querySelectorAll('.projects__grid .card[data-category]');
+
+if (filterButtons.length && projectCards.length) {
+  filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const filter = button.dataset.filter;
+
+      filterButtons.forEach(btn => btn.classList.remove('is-active'));
+      button.classList.add('is-active');
+
+      projectCards.forEach(card => {
+        const categories = (card.dataset.category || '').split(' ').filter(Boolean);
+        const shouldShow = filter === 'all' || categories.includes(filter);
+        card.classList.toggle('is-hidden', !shouldShow);
+      });
+    });
+  });
+}
